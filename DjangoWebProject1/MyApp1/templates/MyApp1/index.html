@@ -1,0 +1,42 @@
+<html>
+    <head><title></title></head>
+
+    <body>
+        <strong>Teachers</strong>
+        {% if content %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Teaching Area</th>
+            </tr>
+            {% for teach in content %}
+            <tr>
+                <td>{{teach.Names}}</td>
+                <td>{{teach.Area}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <strong>No data!!</strong>
+        {% endif %}
+        <p>
+            <strong>Assets</strong>
+            {% if things %}
+            <table>
+                <tr>
+                    <th>Asset</th>
+                    <th>Teacher</th>
+                </tr>
+                {% for ass in things %}
+                <tr>
+                    <td>{{ass.type}}</td>
+                    <td>{{ass.teacher}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <strong>No data!!</strong>
+            {% endif %}
+        </p>
+    </body>
+</html>
